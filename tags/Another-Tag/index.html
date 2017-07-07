@@ -436,13 +436,16 @@
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Fsy</span>
-  <span class="author" itemprop="copyrightHolder"></span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author">Power</span>
 </div>
-	 
+
 
 <div class="powered-by">
-	<a class="theme-link" target="_blank" 
-	href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33018502001813"
+	<a class="theme-link" target="_blank"
+	href="http://www.beian.gov.cn/portal/recordQuery"
 	style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
 	<img src="http://ordel84ed.bkt.clouddn.com/beianIcon.png" style="float:left;">
 	浙公网安备 33018502001813号
@@ -458,6 +461,24 @@
 
 
         
+
+<script>
+window.onload = function()
+{
+var show = document.getElementById("RunTime");
+setInterval(function()
+{
+var time = new Date();
+// 程序计时的月从0开始取值后+1
+var m = time.getMonth() + 1;
+//根据自己博客的创建时间更改数值
+var t = "本站运行时间："+(time.getFullYear()-2017) + "年" + (m-6) + "月"
++ time.getDate() + "天 " + time.getHours() + "时"
++ time.getMinutes() + "分" + time.getSeconds() + "秒";
+show.innerHTML = t;
+}, 1000);
+};
+</script>
 
 <div class="busuanzi-count">
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -477,6 +498,15 @@
       次
     </span>
   
+
+   
+     <span>
+         <i class="fa fa-cubes"></i>
+     </span>
+     <span id="RunTime">
+     读取中...
+     </span>
+   
 </div>
 
 
